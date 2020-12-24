@@ -1,0 +1,27 @@
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "description": "Demo js library startup",
+	"main": "dist/index.js",
+	"module": "dist/index.es.js",
+	"browser": "dist/index.bundle.js",
+	"files": [
+		"dist",
+		"README.md"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c && tsc",
+		"build:watch": "rollup -cw",
+    "pack": "npm pack",
+    "verify": "npm run build && npm run test:ci"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rollup": "^2.35.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "typescript": "^4.1.3"
+  }
+}
